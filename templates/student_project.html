@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Projects</title>
+</head>
+<body>
+    <p>Title: {{ title }}</p>
+    <p>Description: {{ description }}</p>
+    <p>Max Grade: {{ max_grade }}</p>
+
+    {% for student in students %}
+        <li><a href="/student/{{ student['student_github'] }}">{{ student["fname"] }} {{ student["lname"] }}</a> got a {{ student["grade"] }}. </li>
+
+    {% endfor %}
+</body>
+</html>
